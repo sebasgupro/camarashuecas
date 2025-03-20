@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EntreDosOlas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100%;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+            margin-bottom: 20px;
+            z-index: 1;
+        }
+
+        .gallery img {
+            max-width: 300px;
+            height: auto;
+            object-fit: contain;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .text-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .text-container p {
+            line-height: 1.7;
+            margin: 5px 0;
+        }
+
+        @keyframes scrollText {
+            0% { transform: translateY(0%); }
+            100% { transform: translateY(100%); }
+        }
+
+        .text-container {
+          animation: scrollText 20s linear infinite;
+        }
+
+        /* Botón */
+        .info-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            color: white;
+            font-size: 24px;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        /* Ventana modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.462);
+            padding: 20px;
+            z-index: 3;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .modal-content {
+            background-color: rgb(255, 255, 255);
+            color: black;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: black;
+        }
+
+        /* Media queries para responsividad */
+        @media (max-width: 768px) {
+            .gallery img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="img/14131.png" alt="Imagen 1">
+        <img src="img/orchestra1.png" alt="Imagen 2">
+        <img src="img/shapuskate1.png" alt="Imagen 3">
+        <img src="img/shapusky1.png" alt="Imagen 4">
+        <img src="img/skulleras1.png" alt="Imagen 5">
+        <img src="img/sunflower1.png" alt="Imagen 6">
+        <img src="img/fuji200.21.png" alt="Imagen 7">
+        <img src="img/fuji200.22.png" alt="Imagen 8">
+        <img src="img/fuji200.23.png" alt="Imagen 9">     
+        <img src="img/Foto-2.1.png" alt="Imagen 10">
+        <img src="img/Foto-2.2.png" alt="Imagen 11">
+        <img src="img/Foto-2.3.png" alt="Imagen 12">
+        <img src="img/Foto-3.1.png" alt="Imagen 10">
+        <img src="img/Foto-3.2.png" alt="Imagen 11">
+        <img src="img/Foto-3.3.png" alt="Imagen 12">
+        </div>
+    <div class="text-container">
+        <p>....</p>
+        <p>....</p>
+        <p>noches devueltas </p>
+        <p>  parpadeo intermitente </p>
+            <p>   entre dos olas </p>
+            <p>   movimiento natural  </p>
+            <p>   entre huecas cámaras  </p>
+            <p>  vueltas de eco y </p>
+            <p>  grietas de rebote </p>
+            <p>  entre un palpitante vientre </p>
+            <p> y una desrazón actuante </p>
+            <p>....</p>
+            <p>....</p>
+            <p>noches devueltas </p>
+        <p> parpadeo intermitente </p>
+            <p>   entre dos olas </p>
+            <p>   movimiento natural  </p>
+            <p>   entre huecas cámaras  </p>
+            <p>  vueltas de eco y </p>
+            <p>  grietas de rebote </p>
+            <p>  entre un palpitante vientre </p>
+            <p> y una desrazón actuante </p>    
+            <p>....</p>
+        <p>....</p>
+        <p>noches devueltas </p>
+        <p>  parpadeo intermitente </p>
+            <p>   entre dos olas </p>
+            <p>   movimiento natural  </p>
+            <p>   entre huecas cámaras  </p>
+            <p>  vueltas de eco y </p>
+            <p>  grietas de rebote </p>
+            <p>  entre un palpitante vientre </p>
+            <p> y una desrazón actuante </p>
+            <p>....</p>
+        <p>....</p>
+        <p>noches devueltas </p>
+        <p>  parpadeo intermitente </p>
+            <p>   entre dos olas </p>
+            <p>   movimiento natural  </p>
+            <p>   entre huecas cámaras  </p>
+            <p>  vueltas de eco y </p>
+            <p>  grietas de rebote </p>
+            <p>  entre un palpitante vientre </p>
+            <p> y una desrazón actuante </p>
+            <p>....</p>
+        <p>....</p>
+        <p>noches devueltas </p>
+        <p>  parpadeo intermitente </p>
+            <p>   entre dos olas </p>
+            <p>   movimiento natural  </p>
+            <p>   entre huecas cámaras  </p>
+            <p>  vueltas de eco y </p>
+            <p>  grietas de rebote </p>
+            <p>  entre un palpitante vientre </p>
+            <p> y una desrazón actuante </p>
+            <p>....</p>
+            <p>....</p>
+            <p>noches devueltas </p>
+            <p>  parpadeo intermitente </p>
+                <p>   entre dos olas </p>
+                <p>   movimiento natural  </p>
+                <p>   entre huecas cámaras  </p>
+                <p>  vueltas de eco y </p>
+                <p>  grietas de rebote </p>
+                <p>  entre un palpitante vientre </p>
+                <p> y una desrazón actuante </p>
+                <p>....</p>
+        <p>....</p>
+        <p>noches devueltas </p>
+        <p>  parpadeo intermitente </p>
+            <p>   entre dos olas </p>
+            <p>   movimiento natural  </p>
+            <p>   entre huecas cámaras  </p>
+            <p>  vueltas de eco y </p>
+            <p>  grietas de rebote </p>
+            <p>  entre un palpitante vientre </p>
+            <p> y una desrazón actuante </p>
+            <p>....</p>
+            <p>....</p>
+        </div>
+    <button class="info-button">+</button>
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2> </h2>
+            <p>puntos de contacto  <br>
+                entre diferentes capas <br>
+                una vida  y sus fragmentos <br>
+                subrayar la cotidianidad <br>
+                por procesos entre cambios <br>
+                de eventos simultáneos <br>
+                que construyen noche y día</p>
+            <p>...</p>
+        </div>
+    </div>
+
+    <script>
+        const infoButton = document.querySelector('.info-button');
+        const modal = document.querySelector('.modal');
+        const modalClose = document.querySelector('.modal-close');
+
+        infoButton.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+
+        modalClose.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) { // Cambio en esta línea
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
