@@ -146,10 +146,15 @@
                 }
                 @keyframes scrollText {
                 0% { transform: translateY(0%); }
-                100% { transform: translateY(3580%); }
+                100% { transform: translateY(500%); }
                      }
                 .text-container {
               animation: scrollText 28s linear infinite;
+                  
+                .text-container p {
+                line-height: .7;
+                margin: 2px 0;
+            }
             }
             }
         </style>
